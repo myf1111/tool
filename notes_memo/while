@@ -1,0 +1,7 @@
+i=19
+while(( $i < 22 ))
+do
+    let "i += 1"
+    git tag -d $i
+    git push origin :refs/tags/$i
+done
