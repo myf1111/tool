@@ -1,0 +1,71 @@
+1.
+  git pull  origin M:temp
+
+2.
+  返回到之前版本
+git log
+ git reset --hard "commit id"  git checkout   "commit id"
+ 
+3.
+ 下载
+git clone git@code.aliyun.com:873087176/ECC.git
+
+git remote add origin git@code.aliyun.com:873087176/ECC.git
+
+4.
+本地更新远程 
+git add ggff.txt
+git commit -m "add README"
+git push -u origin master
+
+5.
+远程更新本地
+git pull
+
+
+
+6.
+法2. git pull\git status\ gitcmt "mycommit"(提交备注)； 前提把gitcmt文件所在路径加入到环境变量的path路径里，提交时依次输入即可。
+
+gitcmt文件
+文件名：gitcmt
+内容：
+#!/bin/bash
+currDir=$(pwd)
+remark=$1
+if [ ${remark}x = ""x ];then
+remark=$(date +"%Y-%m-%d %H:%M:%S")
+fi
+echo ${currDir}
+git add .
+git commit -m "\"${remark}\""
+git push
+
+
+7.
+1建立远程分支
+git branch m
+git checkout m
+git push origin m
+
+8.
+删除远程分支
+git branch -r -d origin/branch-name  
+git push origin :branch-name  
+
+git tag -d <tagname>
+git push origin :refs/tags/<tagname>
+
+9.
+git checkout . #本地所有修改的。没有的提交的，都返回到原来的状态
+git stash #把所有没有提交的修改暂存到stash里面。可用git stash pop回复。
+git reset --hard HASH #返回到某个节点，不保留修改。
+git reset --soft HASH #返回到某个节点。保留修改
+
+10.
+git tag 2
+git push origin 2
+
+11.
+ 列出远程分支和标签
+git ls-remote 
