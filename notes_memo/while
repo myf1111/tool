@@ -1,5 +1,5 @@
-i=19
-while(( $i < 22 ))
+i=0
+while(( $i < 2 ))
 do
     let "i += 1"
     git tag -d $i
