@@ -1,4 +1,9 @@
 git add .
 NNotes= $(cat notes.txt)
-git commit -m $NNotes
+for str in `GitTool/notes.txt`;
+do
+     git commit -m $str
+done
+
+
 git push -u origin master
