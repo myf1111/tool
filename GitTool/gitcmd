@@ -1,3 +1,4 @@
 git add .
-git commit -m "Tag"
+Notes= $(cat GitTool/notes.txt)
+git commit -m $Notes
 git push -u origin master
