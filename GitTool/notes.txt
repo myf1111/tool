@@ -1,1 +1,4 @@
 python读写exl操作
+
+1将cpp文件生产sv可以调用的动态库命令
+g++ -fPIC cpp/*cpp -shared  -o cpplib.so 
